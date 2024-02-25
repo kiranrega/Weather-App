@@ -71,7 +71,7 @@ const WeatherDisplay: React.FC = () => {
           updateBackgroundColor(response.data.weather ? response.data.weather[0].main : "");
         })
         .catch((error) => {
-          setError("Please enter a valid city or location");
+          setError("Please enter a valid city or location", {error});
         });
     }
   };
