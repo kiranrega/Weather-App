@@ -104,7 +104,7 @@ const WeatherDisplay: React.FC = () => {
           onChange={(event: ChangeEvent<HTMLInputElement>) => setLocation(event.target.value)}
           onKeyPress={searchLocation}
           type="search"
-          placeholder="Enter City or Location..."
+          placeholder="Enter City or Location and press Enter..."
         />
       </motion.div>
       {error ? (
