@@ -33,7 +33,7 @@ const WeatherDisplay: React.FC = () => {
             setLocation(event.target.value)
           }
           type="search"
-          placeholder="Enter City or Location..."
+          placeholder="Enter City or Location and press Enter..."
         />
         {/* Button to show weather details */}
         <button onClick={navigateToDetailsPage} className="showDetailsButton">
