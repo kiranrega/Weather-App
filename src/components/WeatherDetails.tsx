@@ -74,14 +74,6 @@ const WeatherDetails: React.FC = () => {
     );
   };
 
-  // Function to fetch weather data for next 7 days
-  const getDatafor7days = async (lat: any, lon: any) => {
-    const apiKey = "98e86bef152f7176adbaf1ffb5604007";
-    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`;
-    const data = await axios.get(url);
-    console.log(lat, "lat");
-  };
-
   // Effect hook to update background color when weather data changes
   useEffect(() => {
     updateBackgroundColor(data.weather ? data.weather[0].main : "");
@@ -98,13 +90,6 @@ const WeatherDetails: React.FC = () => {
           updateBackgroundColor(
             response.data.weather ? response.data.weather[0].main : ""
           );
-
-          // Fetch 7-day forecast if coordinates are available
-          if (response.data.coord) {
-            getDatafor7days(response.data.coord.lat, response.data.coord.lon);
-          } else {
-            setError("Coordinates not found");
-          }
         })
         .catch(() => {
           setError("Please enter a valid city or location");
