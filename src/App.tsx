@@ -1,12 +1,17 @@
-import React from 'react'
-import WeatherDisplay from './components/WeatherDisplay'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import WeatherDisplay from "./components/WeatherDisplay";
+import WeatherDetails from "./components/WeatherDetails";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className='App'>
-      <WeatherDisplay />
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<WeatherDisplay />} />
+        <Route path="/weather-details/:location" element={<WeatherDetails />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

@@ -1,183 +1,212 @@
 .container {
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--sunnyGradient);
-    position: relative;
-    transition: 0.3s;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--sunnyGradient);
+  position: relative;
+  transition: 0.3s;
+}
+.container .logo {
+  width: 100px;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+.container .error {
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+.container .searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-top: 3em;
+  transition: 1.4s;
+}
+.container .searchBar input {
+  background: white;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", cursive;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 30%;
+}
+.container .weatherOutput {
+  transition: 1.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  color: var(--fontPrimaryColor);
+}
+.container .weatherOutput .left img {
+  width: 400px;
+  max-width: 700px;
+}
+.container .weatherOutput .right {
+  margin-right: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .weatherOutput .right h1 {
+  font-size: 7em;
+  font-weight: 200;
+}
+.container .weatherOutput .right h3 {
+  font-weight: 300;
+  text-align: center;
+}
+.container .weatherOutput .right h2 {
+  margin-top: 1em;
+  font-weight: 300;
+}
+.container .weatherOutput .right h2 span {
+  font-weight: 500;
+}
+.container .weatherOutput .right .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.container .weatherOutput .right .data div {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.container .weatherOutput .right .data div span {
+  margin-bottom: 1.7em;
+}
+.container .weatherOutput .right .data div span h2 {
+  font-weight: 400;
+}
+.container .weatherOutput .right .data div span p {
+  color: var(--fontSecondaryColor);
+}
+.container .weatherOutput .right .data div img {
+  width: 60px;
+}
+.container .weatherOutput .right .moreData .toggleDetails {
+  transition: 0.4s;
+  text-align: center;
+  cursor: pointer;
+}
+.container .weatherOutput .right .moreData .wrapper {
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  align-items: center;
+}
+.container .weatherOutput .right .moreData .wrapper div {
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.container .weatherOutput .right .moreData div img {
+  width: 60px;
+}
+.container .weatherOutput .right .moreData div span {
+  margin-bottom: 1.7em;
+}
+.container .weatherOutput .right .moreData div span h2 {
+  font-weight: 400;
+}
+.container .weatherOutput .right .moreData div span p {
+  color: var(--fontSecondaryColor);
+}
+
+@media (max-width: 970px) {
+  .container .searchBar input {
+    width: 300px;
   }
-  .container .logo {
-    width: 100px;
-    position: absolute;
-    top: 1%;
-    left: 1%;
+  .container .left img {
+    width: 400px;
   }
-  .container .error {
-    color: white;
-    text-align: center;
-    margin-top: 1em;
+}
+@media (max-width: 840px) {
+  .container {
+    height: 100%;
+    padding-bottom: 3em;
   }
   .container .searchBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    padding-top: 3em;
-    transition: 1.4s;
+    margin-top: 7em;
   }
   .container .searchBar input {
-    background: white;
-    padding: 14px 20px;
-    border: none;
-    outline: none;
-    font-family: "Montserrat", cursive;
-    border-radius: 20px;
-    font-size: 18px;
-    width: 30%;
+    width: 70%;
   }
   .container .weatherOutput {
-    transition: 1.4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
-    color: var(--fontPrimaryColor);
+    gap: 0;
+    flex-direction: column;
   }
   .container .weatherOutput .left img {
-    width: 400px;
-    max-width: 700px;
+    width: 200px;
   }
   .container .weatherOutput .right {
-    margin-right: 8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-right: 0;
   }
-  .container .weatherOutput .right h1 {
-    font-size: 7em;
-    font-weight: 200;
+}
+@media (max-width: 700px) {
+  .container {
+    justify-content: flex-start;
+    padding-top: 15%;
   }
-  .container .weatherOutput .right h3 {
-    font-weight: 300;
-    text-align: center;
-  }
-  .container .weatherOutput .right h2 {
-    margin-top: 1em;
-    font-weight: 300;
-  }
-  .container .weatherOutput .right h2 span {
-    font-weight: 500;
+  .container .searchBar {
+    margin-top: 0em;
+    padding-top: 0;
   }
   .container .weatherOutput .right .data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-  }
-  .container .weatherOutput .right .data div {
-    display: flex;
-    gap: 7px;
-    align-items: center;
-  }
-  .container .weatherOutput .right .data div span {
-    margin-bottom: 1.7em;
-  }
-  .container .weatherOutput .right .data div span h2 {
-    font-weight: 400;
-  }
-  .container .weatherOutput .right .data div span p {
-    color: var(--fontSecondaryColor);
+    gap: 10px;
   }
   .container .weatherOutput .right .data div img {
-    width: 60px;
-  }
-  .container .weatherOutput .right .moreData .toggleDetails {
-    transition: 0.4s;
-    text-align: center;
-    cursor: pointer;
+    width: 50px;
   }
   .container .weatherOutput .right .moreData .wrapper {
-    transition: 0.4s;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    align-items: center;
-  }
-  .container .weatherOutput .right .moreData .wrapper div {
-    transition: 0.4s;
-    display: flex;
-    align-items: center;
     gap: 7px;
   }
-  .container .weatherOutput .right .moreData div img {
-    width: 60px;
+}
+@media (max-width: 520px) {
+  .container {
+    justify-content: flex-start;
+    padding-top: 25%;
   }
-  .container .weatherOutput .right .moreData div span {
-    margin-bottom: 1.7em;
-  }
-  .container .weatherOutput .right .moreData div span h2 {
-    font-weight: 400;
-  }
-  .container .weatherOutput .right .moreData div span p {
-    color: var(--fontSecondaryColor);
-  }
-  
-  @media (max-width: 970px) {
-    .container .searchBar input {
-      width: 300px;
-    }
-    .container .left img {
-      width: 400px;
-    }
-  }
-  @media (max-width: 840px) {
-    .container {
-      height: 100%;
-      padding-bottom: 3em;
-    }
-    .container .searchBar {
-      margin-top: 7em;
-    }
-    .container .searchBar input {
-      width: 70%;
-    }
-    .container .weatherOutput {
-      gap: 0;
-      flex-direction: column;
-    }
-    .container .weatherOutput .left img {
-      width: 200px;
-    }
-    .container .weatherOutput .right {
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 700px) {
-    .container {
-      justify-content: flex-start;
-      padding-top: 15%;
-    }
-    .container .searchBar {
-      margin-top: 0em;
-      padding-top: 0;
-    }
-    .container .weatherOutput .right .data {
-      gap: 10px;
-    }
-    .container .weatherOutput .right .data div img {
-      width: 50px;
-    }
-    .container .weatherOutput .right .moreData .wrapper {
-      gap: 7px;
-    }
-  }
-  @media (max-width: 520px) {
-    .container {
-      justify-content: flex-start;
-      padding-top: 25%;
-    }
-  }
-  
+}
+
+.showDetailsButton {
+  background-color: #007bff; /* Blue color */
+  color: white; /* Text color */
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.showDetailsButton:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.backButton {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 20px;
+  width: 20%;
+  color: #3069a7;
+  align-self: center;
+  margin-top: 3%;
+}
