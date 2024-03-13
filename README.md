@@ -17,4 +17,4 @@ Project Setup: Ensure you have a React project set up with Node.js and npm (or y
 npm install react react-geocode axios framer-motion 
 
 ## Deployed Link
-https://vercel.com/kiranfrnds/weather-app
+https://weather-kkr52eeyt-kiranfrnds.vercel.app/
